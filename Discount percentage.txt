@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Discount {
+	 public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.print("Enter the purchase amount: ");
+	        int purchaseAmount = scanner.nextInt();
+
+	        double finalAmount = purchaseAmount;
+	        if (purchaseAmount < 500) {
+	            // No discount
+	            finalAmount = purchaseAmount;
+	        } else if (purchaseAmount >= 500 && purchaseAmount <= 1000) {
+	            // 10% discount
+	            finalAmount = purchaseAmount * 0.90;
+	        } else if (purchaseAmount > 1000) {
+	            // 20% discount
+	            finalAmount = purchaseAmount * 0.80;
+	        }
+	        System.out.printf(" after discount final amount is:"+ finalAmount);
+
+	        scanner.close();
+	    }
+}
